@@ -1,0 +1,38 @@
+body {
+    background-image: url(images/background\ 5.jpg);
+    background-repeat: no-repeat;
+
+}
+.navbar-nav {
+    margin-left: auto;
+}
+
+  #carouselExampleIndicators {
+    max-width: 100%;
+    width: 59em;
+    top: 110px;
+    left: 610px;
+    position: absolute;
+  }
+
+  #headerofmaincontent{
+      position: absolute;
+      top: 115px;
+      left: 110px;
+      color: aliceblue;
+  }
+
+  #buttons{
+      position: absolute;
+      top: 400px;
+      left: 14px;
+  }
+
+  #footer{
+      position: absolute;
+      margin-top: 650px;
+      width: 100%;
+  }
+
+
+
