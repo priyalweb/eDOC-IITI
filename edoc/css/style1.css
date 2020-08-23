@@ -1,0 +1,142 @@
+body{
+  background-color: aliceblue;
+}
+
+form {border: 3px solid #f1f1f1;
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+a> .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 25%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.cancelbutton , #cancelbutton{
+	background-color: rgb(255 0 0 / 70%);
+	width: 20%;
+    font-size: 15;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+
+.addbutton , #myButton{
+	background-color: rgb(30 126 52 / 0.9);
+	width: 20%;
+    font-size: 15;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+
+}
+
+
+.viewc > table {
+    border-collapse: collapse;
+    color: rgb(29 29 30 / 80%);
+    border: 3px solid black;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-family: Roboto,"Courier New",Georgia;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 10%;
+    text-shadow: 0px 1px 0px rgba(118, 110, 110, 0.8);
+    border-collapse: separate;
+    border-spacing: 0px;
+
+}
+tr {
+    display: table-row;
+    vertical-align: none;
+    border-color: none;
+}
+
+th {
+	background: linear-gradient(rgb(0 124 59) 0%,rgb(243, 243, 191) 100%);
+	border-spacing: 0;
+	border-bottom: 2px solid rgb(239 237 255);;
+	border-right: 1px solid floralwhite;
+	padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(85, 82, 95);
+}
+
+tr > td{
+    background: rgb(6 41 143 / 0.1);
+    border: 1px solid floralwhite;
+    color: rgb(0 0 0);
+    font-weight: 550;
+}
+
+tr:hover{ 
+    background: rgb(36 70 165 / 50%);
+	color: rgba(64, 64, 75, 1);
+}
+tr>th:first-child{
+	border-radius: 10px 0 0 0;
+	border-left: none;
+}
+tr>th:last-child{
+	border-radius: 0 10px 0 0;
+	border-right: none;
+}
+
+
