@@ -44,7 +44,7 @@ background-color: aliceblue;
 }
 </style>
 </head>
-<body style="background-color: aliceblue;" >
+<body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;font-size: 16px;" >
 <h1 style="margin: 1% 39% 1% 42%;" >Patient Login</h1>
 <?php
 flashMessages();

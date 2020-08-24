@@ -39,7 +39,7 @@ if ( ! isset($_SESSION['patient_id']) || ! isset($_SESSION['p_name']) ) {
   </head>
 <?php require_once "header.php"; ?>
 
-  <body style="background-color: aliceblue;">
+  <body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;font-size: 16px;">
 <main role="main">
 
   <section class="jumbotron text-center" style="padding: 1%; background-color: rgb(217 237 255);">
@@ -71,10 +71,10 @@ if ( ! isset($_SESSION['patient_id']) || ! isset($_SESSION['p_name']) ) {
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <?php  $logout = 'p_logout.php';
-                  echo(' <a href="'.$logout.'" ><button style="padding: 10% 18%; font-weight: 600;font-size: 18px;color: #050505;background-color: #ff00008c;border width: 5;border-style: solid;
+                  echo(' <a href="'.$logout.'" ><button style="padding: 10% 18%; font-weight: 600;font-size: 16px;color: #050505;background-color: #ff00008c;border width: 5;border-style: solid;
                   border-width: 1px 3px 3px 1px;" type="button" class="btn btn-sm btn-outline-secondary">LOGOUT</button></a> ')?>
                   <?php $add = 'p_add.php';
-                  echo(' <a href="'.$add.'" style="margin-left: 15%;"><button style="padding: 12% 44%;font-weight: 600;font-size: 18px;color: #050505;background-color: #21e6167a;
+                  echo(' <a href="'.$add.'" ><button style="padding: 12% 44%;font-weight: 600;font-size: 16px;color: #050505;background-color: #21e6167a;
                   border width: 5;border-style: solid;border-width: 1px 3px 3px 1px;margin-left: 70%;" type="button" class="btn btn-sm btn-outline-secondary"> ADD</button></a> ')?>
                 </div>
               </div>
@@ -91,7 +91,7 @@ if ( ! isset($_SESSION['patient_id']) || ! isset($_SESSION['p_name']) ) {
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <?php  $logout = 'p_logout.php';
-                  echo(' <a href="'.$logout.'" ><button style="padding: 10% 18%; font-weight: 600;font-size: 18px;color: #050505;background-color: #ff00008c;border width: 5;border-style: solid;
+                  echo(' <a href="'.$logout.'" ><button style="padding: 10% 18%; font-weight: 600;font-size: 16px;color: #050505;background-color: #ff00008c;border width: 5;border-style: solid;
                   border-width: 1px 3px 3px 1px;" type="button" class="btn btn-sm btn-outline-secondary">LOGOUT</button></a> ')?>
 
                   <?php
@@ -102,11 +102,11 @@ if ( ! isset($_SESSION['patient_id']) || ! isset($_SESSION['p_name']) ) {
                   $row = $stmt->fetch(PDO::FETCH_ASSOC);
                   if ( $row !== false ) {
                     $patient_id1 = $row['patient_id'];
-                    echo(' <a href="p_book.php?p_profile_id='.$row['p_profile_id'].'" style="margin-left: 15%;"><button style="padding: 11% 39%;font-weight: 600;font-size: 18px;color: #050505;background-color: #21e6167a;
+                    echo(' <a href="p_book.php?p_profile_id='.$row['p_profile_id'].'" style="margin-left: 15%;"><button style="padding: 11% 39%;font-weight: 600;font-size: 16px;color: #050505;background-color: #21e6167a;
                     border width: 5;border-style: solid;border-width: 1px 3px 3px 1px;margin-left: 45%;" type="button" class="btn btn-sm btn-outline-secondary">BOOK</button></a> ');
                   }
                   if ( $patient_id1 === false ) {
-                    echo(' <a href="#" style="margin-left: 15%;"><button onclick="myFunction()" style="padding: 11% 39%;font-weight: 600;font-size: 18px;color: #050505;background-color: #21e6167a;
+                    echo(' <a href="#" ><button onclick="myFunction()" style="padding: 11% 39%;font-weight: 600;font-size: 16px;color: #050505;background-color: #21e6167a;
                     border width: 5;border-style: solid;border-width: 1px 3px 3px 1px;margin-left: 45%;" type="button" class="btn btn-sm btn-outline-secondary">BOOK</button></a> ');
                   }
                   ?>
@@ -129,7 +129,7 @@ function myFunction() {
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <?php  $logout = 'p_logout.php';
-                  echo(' <a href="'.$logout.'" ><button style="padding: 10% 18%; font-weight: 600;font-size: 18px;color: #050505;background-color: #ff00008c;border width: 5;border-style: solid;
+                  echo(' <a href="'.$logout.'" ><button style="padding: 10% 18%; font-weight: 600;font-size: 16px;color: #050505;background-color: #ff00008c;border width: 5;border-style: solid;
                   border-width: 1px 3px 3px 1px;" type="button" class="btn btn-sm btn-outline-secondary">LOGOUT</button></a> ')?>
   <?php
                   $patient_id1 = false;
@@ -139,12 +139,12 @@ function myFunction() {
                   $row = $stmt->fetch(PDO::FETCH_ASSOC);
                   if ( $row !== false ) {
                     $patient_id1 = $row['patient_id'];
-                    echo(' <a href="p_view.php?p_profile_id='.$row['p_profile_id'].'" style="margin-left: 15%;"><button style="padding: 11% 39%;font-weight: 600;font-size: 18px;color: #050505;background-color: #21e6167a;
-                    border width: 5;border-style: solid;border-width: 1px 3px 3px 1px;margin-left: 45%;" type="button" class="btn btn-sm btn-outline-secondary">View</button></a> ');
+                    echo(' <a href="p_view.php?p_profile_id='.$row['p_profile_id'].'" ><button style="padding: 11% 39%;font-weight: 600;font-size: 16px;color: #050505;background-color: #21e6167a;
+                    border width: 5;border-style: solid;border-width: 1px 3px 3px 1px;margin-left: 45%;" type="button" class="btn btn-sm btn-outline-secondary">VIEW</button></a> ');
                   }
                   if ( $patient_id1 === false ) {
-                    echo(' <a href="#" style="margin-left: 15%;"><button onclick="myFunction()" style="padding: 11% 39%;font-weight: 600;font-size: 18px;color: #050505;background-color: #21e6167a;
-                    border width: 5;border-style: solid;border-width: 1px 3px 3px 1px;margin-left: 45%;" type="button" class="btn btn-sm btn-outline-secondary">View</button></a> ');
+                    echo(' <a href="#" ><button onclick="myFunction()" style="padding: 11% 39%;font-weight: 600;font-size: 16px;color: #050505;background-color: #21e6167a;
+                    border width: 5;border-style: solid;border-width: 1px 3px 3px 1px;margin-left: 45%;" type="button" class="btn btn-sm btn-outline-secondary">VIEW</button></a> ');
                   }
                   ?>
 <script>

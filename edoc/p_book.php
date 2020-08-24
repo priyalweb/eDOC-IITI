@@ -59,13 +59,15 @@ $appointments = loadApp($pdo, $_REQUEST['p_profile_id']);
 <?php require_once "head.php"; ?>
 <?php require_once "header.php"; ?>
 </head>
-<body style="background-color: aliceblue;">
+<body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;font-size: 16px;">
 <div class="container editc">
+  <div style="padding: 1%; background-color: rgb(217 237 255);margin-bottom: 1%;">
   <h1 style="margin-left: 15%;margin-bottom: 2%; display:inline-block;">Booking appointment for
   <?php
   echo("<h1 style='color:#2a66ba;; display:inline-block;margin-left: 10px'>");
   echo(htmlentities($_SESSION['p_name']));
   echo("</h1>") ?> </h1>
+</div>
   <?php flashMessages(); ?>
 <?php
 // p_profile_id	patient_id	first_name	last_name	email	roll_number	contact	gender	room_number	med_history
@@ -81,46 +83,47 @@ $bb = htmlentities($profile['bloodgroup']);
 $hh = htmlentities($profile['hostel_name']);
 //$profile_id = $profile['profile_id'];
 ?>
-<form method="post" action="p_book.php" style="font-size: 20px;font-weight: 600; background-color: #dcebf7;padding: 1%;" 
+<form method="post" action="p_book.php" style="font-size: 16px;font-weight: 600; background-color: #dcebf73b;padding: 1%;border: 8px solid rgb(146 255 251 / 34%);
+border-width: 1px 10px 10px 1px;"
 onsubmit="document.getElementById('myButton').disabled=true; document.getElementById('myButton').value='Submitting, please wait...';">
   <input type="hidden" name="p_profile_id"
   value="<?= htmlentities($_REQUEST['p_profile_id']); ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"/>
 <details>
-      <summary style="    padding: 2%;background-color: #acdaff7a;border-radius: 5%;font-size: 18px; margin-bottom: 8%; margin-top: 2%;
-      background: linear-gradient(#165e97a6 0%,aliceblue 100%);">View your personal details</summary>
+      <summary style="    padding: 2%;background-color: #acdaff7a;border-radius: 5%;font-size: 16px; margin-bottom: 5%; margin-top: 1%;
+      background: linear-gradient(aliceblue 0%,#165e97a6 100%);">View your personal details</summary>
       Patient Details:<br>
       <div style="border-style: dotted;padding: 1%;border-color: #737a80;border-width: medium;padding-bottom: 0;margin-bottom: 1%;margin-top: 1%;background-color: #acdaff7a;">
        <p>
        First Name:
        <input type="text" readonly name="first_name" class="fn" size="60"
-       value="<?= $ff ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       value="<?= $ff ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
        <p>Last Name:
        <input type="text" readonly name="last_name" class="ln" size="60"
-       value="<?= $ll ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       value="<?= $ll ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
        <p>Email:
        <input type="text" readonly name="email" class="em" size="30"
-       value="<?= $ee ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       value="<?= $ee ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
        <p>Roll Number:
        <input type="text" readonly name="roll_number" class="rolln" size="50"
-       value="<?= $rr ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       value="<?= $rr ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
        <p>Contact:
        <input type="text" readonly name="contact" class="cn" size="60"
-       value="<?= $cc ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       value="<?= $cc ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
        <p>Bloodgroup:
        <input type="text" readonly name="bloodgroup" class="bg" size="30"
-       value="<?= $bb ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
-       <span>Gender:</span><p style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto; display:inline-block;margin-left: 4%;padding: 0% 4% 0% 4%;    margin-bottom: 1.5%;">
-       <input type="radio" readonly name="gender" class="ge" <?php if($profile['gender']=="1"){echo "checked";}?> value="1" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;">Female
-       <input type="radio" readonly name="gender" class="ge" <?php if($profile['gender']=="0"){echo "checked";}?> value="0" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;">Male
+       value="<?= $bb ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       <span>Gender:</span><p style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto; display:inline-block;margin-left: 4%;padding: 0% 4% 0% 4%;    margin-bottom: 1.5%;">
+       <input type="radio" readonly name="gender" class="ge" <?php if($profile['gender']=="1"){echo "checked";}?> value="1" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;">Female
+       <input type="radio" readonly name="gender" class="ge" <?php if($profile['gender']=="0"){echo "checked";}?> value="0" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;">Male
        </p>
        <p>Hall of Residence:
        <input type="text" readonly name="hostel_name" class="hn" size="50"
-       value="<?= $hh ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       value="<?= $hh ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
        <p>Room Number:
        <input type="text" readonly name="room_number" class="roomn" size="50"
-       value="<?= $rrrr ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
+       value="<?= $rrrr ?>" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"></p>
        <p>Medical History:<br/>
-       <textarea name="med_history" readonly rows="3" cols="70" class="med" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"><?= $mmmm ?></textarea></p>
+       <textarea name="med_history" readonly rows="3" cols="70" class="med" style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;"><?= $mmmm ?></textarea></p>
       </div>
 </details>
 <p>Appointment: <input type="submit" id="addApp" value="Click here to BOOK" style="background-color: #21e6167a;font-size: 15;padding-bottom: 1.5%;padding-top: 1.5%;
@@ -133,7 +136,7 @@ margin-right: 4%;    margin-left: 5%;" onclick="return confirm('Do you want to a
 <?php
 $countApp = 0;
 echo(' <details>
-    <summary style="    padding: 2%;background-color: #acdaff7a;border-radius: 5%;font-size: 18px; margin-bottom: 2%;    margin-top: 10%;
+    <summary style="    padding: 2%;background-color: #acdaff7a;border-radius: 5%;font-size: 16px; margin-bottom: 1%;    margin-top: 10%;
     background: linear-gradient(#165e97a6 0%,aliceblue 100%);">View your previously booked Appointments:</summary> ');
 echo('<p><div style="border-style: dotted;padding: 1%;border-color: #737a80;border-width: medium;padding-bottom: 0;margin-bottom: 1%;background-color: #acdaff7a;">'."\n");
 if ( count($appointments) >0 ){
@@ -143,17 +146,17 @@ if ( count($appointments) >0 ){
     echo('
     <h2><input style="border: 0;background-color: #0c8cff47;text-align: center;font-variant: all-small-caps;font-size: xx-large;font-weight: 700;margin: 0;padding: 0;" type="text"
     id="fname" name="app_num'.$countApp.'" value="Appointment '.$countApp.'" readonly><br></h2>
-    <p>Category: <input style="border: 0;background-color: #ffffffb0;padding: 0px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;" readonly
+    <p>Category: <input style="border: 0;background-color: #e0e4e6;padding: 0px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;" readonly
     type="text" size="60" name="app_category'.$countApp.'" class="category"
     value="'.htmlentities($appointment['name']).'" />
-<p>Date: <input readonly style="border: 0;background-color: #ffffffb0;padding: 0px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;"
+<p>Date: <input readonly style="border: 0;background-color: #e0e4e6;padding: 0px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;"
 type="date" class="dt" name="app_date'.$countApp.'" value="'.$appointment['date'].'" />
-<p>Time: <input readonly style="border: 0;background-color: #ffffffb0;padding: 0px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;"
+<p>Time: <input readonly style="border: 0;background-color: #e0e4e6;padding: 0px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;"
 type="time" class="tm" name="app_time'.$countApp.'" value="'.$appointment['time'].'" />
 
 <input type="hidden" value="Delete" class="minus" onclick="$(\'#app'.$countApp.'\').remove(); return false;" />
 <p>Description:<br/>
-<textarea readonly style="border: 0;background-color: #ffffffb0;padding: 2px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;"
+<textarea readonly style="border: 0;background-color: #e0e4e6;padding: 2px;display: inline-block;margin: 0;width: auto;margin: 0;padding: 0;"
 name="app_desc'.$countApp.'" placeholder="Type any extra info you want to convey OR type nil..." rows="3" class="desc" cols="70">'.$appointment['description'].'</textarea></p>
 ');
     echo("\n</div>\n");

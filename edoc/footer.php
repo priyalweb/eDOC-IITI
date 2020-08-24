@@ -14,7 +14,7 @@
     <title>Footer</title>
 </head>
 
-<body>
+<body style="font-family: Arial, Helvetica, sans-serif;font-size: 16px;">
     <!-- Footer -->
     <footer class="page-footer font-large " style="color:rgb(255, 255, 255); padding: 0; background-color: #000000e0;">
 

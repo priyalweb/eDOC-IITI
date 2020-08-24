@@ -31,16 +31,18 @@ $appointments = loadApp($pdo, $_REQUEST['p_profile_id']);
 <?php require_once "header.php"; ?>
 <link rel="stylesheet" type="text/css" href="css/view.css">
 </head>
-<body style="background-color: aliceblue;">
+<body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;font-size: 16px;">
 <?php
 flashMessages();
 ?>
 <div class="container viewc">
+  <div  style="padding: 1%; background-color: rgb(217 237 255);">
 <h1  style="margin-left: 15%;margin-bottom: 2%; display:inline-block;">Profile Details for
 <?php
 echo("<h1 style='color:#2a66ba;; display:inline-block;margin-left: 10px'>");
 echo(htmlentities($_SESSION['p_name']));
 echo("</h1>") ?> </h1>
+</div>
 <?php flashMessages(); ?>
 <?php
 $ff = htmlentities($profile['first_name']);
@@ -56,12 +58,12 @@ $hh = htmlentities($profile['hostel_name']);
 $p_profile_id = $profile['p_profile_id'];
 
 ?>
-<form method="post" action="p_edit.php" style="font-size: 20px;font-weight: 600; background-color: #dcebf7;padding: 1%;" action="p_add.php"
+<form method="post" action="p_edit.php" style="font-size: 16px;font-weight: 600; background-color: #dcebf7;padding: 1%;" action="p_add.php"
 onsubmit="document.getElementById('myButton').disabled=true; document.getElementById('myButton').value='Submitting, please wait...';">
   <input type="hidden" name="p_profile_id"
 value="<?= htmlentities($_REQUEST['p_profile_id']); ?>" style="border: 0;background-color: #b2ecff;padding: 2px;display: inline-block;margin: 0;width: auto;"/>
   <details open>
-      <summary style="    padding: 2%;background-color: #acdaff7a;border-radius: 5%;font-size: 18px; margin-bottom: 8%; margin-top: 2%;
+      <summary style="    padding: 2%;background-color: #acdaff7a;border-radius: 5%;font-size: 16px; margin-bottom: 5%; margin-top: 1%;
       background: linear-gradient(#165e97a6 0%,aliceblue 100%);">View your personal details</summary>
   Patient Details:<br>
   <div style="border-style: dotted;padding: 1%;border-color: #737a80;border-width: medium;padding-bottom: 0;margin-bottom: 1%;margin-top: 1%;background-color: #acdaff7a;">
@@ -99,7 +101,7 @@ value="<?= htmlentities($_REQUEST['p_profile_id']); ?>" style="border: 0;backgro
 </div>
   </details>
  </form>
- <br><hr>
+ <hr>
  <h2 style="margin-left: 10%;margin-bottom: 2%;margin-right: 50%;">Your Appointments</h2>
 <table>
   <thead>

@@ -109,16 +109,19 @@ $rank = 1;
 <?php require_once "header.php"; ?>
 <?php require_once "head.php"; ?>
 </head>
-<body style="background-color: aliceblue;">
+<body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;font-size: 16px;">
 <div class="container addc">
+  <div style="padding: 1%; background-color: rgb(217 237 255);">
 <h1 style="margin-left: 15%;margin-bottom: 2%; display:inline-block;">Adding personal details for  <?php
 echo("<h1 style='color:#2a66ba;; display:inline-block;margin-left: 10px'>");
 echo(htmlentities($_SESSION['p_name']));
 echo("</h1>") ?> </h1>
+</div>
 <p style="margin:auto; margin-left:15%; margin-bottom:1.5%; display:inline-block;">Please enter only your own personal details. You may be able to submit this form only once.</p><span style="color: red; font-size:30px;">*</span>
 <?php flashMessages(); ?>
 
-<form method="post" style="font-size: 20px;font-weight: 600; background-color: #dcebf7;padding: 1%;" action="p_add.php" onsubmit="document.getElementById('myButton').disabled=true;
+<form method="post" style="font-size: 16px;font-weight: 600; background-color: #dcebf73b;padding: 1%;border: 8px solid rgb(146 255 251 / 34%);
+    border-width: 1px 10px 10px 1px;" action="p_add.php" onsubmit="document.getElementById('myButton').disabled=true;
 document.getElementById('myButton').value='Submitting, please wait...';" >
 <div class="imgcontainer">
   <img src="img/personal.png" alt="Avatar" class="avatar">

@@ -20,7 +20,7 @@
 body {font-family: Arial, Helvetica, sans-serif;
 background-color: aliceblue;
     margin: 4%;
-    margin-top: 2%;
+    margin-top: 2%;font-family: Arial, Helvetica, sans-serif;font-size: 16px;
     /* background-image: url(img/background5.jpg);
     background-repeat: no-repeat;
     background-size: cover; */
