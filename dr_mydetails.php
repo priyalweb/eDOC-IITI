@@ -128,7 +128,7 @@ $result = mysqli_query($conn, $sqldetails);
                     </tr>
                     <tr>
                         <th>contact_naumber</th>
-                        <td><?php echo $rowmydetails['contact_number']; ?></td>
+                        <td><?php echo $rowmydetails['contact']; ?></td>
 
                     </tr>
                     <tr>
