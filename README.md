@@ -7,6 +7,28 @@ The aim is to build a platform online (web application) that will remove the has
 
 TECH STACK - HTML, CSS, JavaScript, JQuery, JSON, BOOTSTRAP, PHP, MYSQL, API
 
+### MySQL Databse- Medical Appointment booking website website 
+![mySql_database](https://user-images.githubusercontent.com/56549165/97178998-514a9700-17be-11eb-9186-80ca3a5251b1.PNG)
+
+### Patient Login
+![patient_login](https://user-images.githubusercontent.com/56549165/97179002-51e32d80-17be-11eb-8d07-8f27e0a56767.PNG)
+
+### Patient Dashboard
+![patient_dashboard](https://user-images.githubusercontent.com/56549165/97179000-514a9700-17be-11eb-9517-33e7f5f1c59f.PNG)
+
+### Add Your Personal Details- Medical
+![Add_personal_details](https://user-images.githubusercontent.com/56549165/97179470-dd5cbe80-17be-11eb-9979-e3869687b868.PNG)
+
+### Book Appointments - Don't forget to add your details!
+![Book_appointment](https://user-images.githubusercontent.com/56549165/97178990-4c85e300-17be-11eb-949a-458ffa865fbe.PNG)
+
+### Your Personal Added details
+![personal_details](https://user-images.githubusercontent.com/56549165/97179005-527bc400-17be-11eb-8737-23f01ef9ef91.PNG)
+
+### Look for your previously booked appointments
+![previous_appointments](https://user-images.githubusercontent.com/56549165/97179006-527bc400-17be-11eb-82ce-98b2d89907e4.PNG)
+
+
 1.) For the beautiful designing of the webpage, we will use HTML, CSS, BOOTSTRAP. 2.) To program the responses of the webpage we will use JavaScript, JQuery, JSON. 3.) For the backend, we will use PHP and manage the database we will use MYSQL. 4.) To make online consultation possible through video call we will be using the API of any online meeting app.
 
 During the pandemic, we all have realized the importance of health and as of now, our institution does not have any online portal concerning the health care of students. Now times have changed, Social distancing is going to be a regular part of our lifestyles for the next couple of years so amidst all of the circumstances present or which may arise in the near future it has now become important to take into account the methods which will improve the health care system in our campus. Some major problems which health center might face after all students return to the campus:-
